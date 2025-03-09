@@ -13,3 +13,23 @@ function divide(a, b) {
     }
     return a / b;
 }
+
+let currentNumber = '';
+let operator = '';
+let nextNumber = '';
+
+function operate(operator, a, b){
+    switch(operator){
+        case '+':
+            return add(a, b);
+        case '-':
+            return subtract(a, b);
+        case '*':
+            return multiply(a, b);
+        case '/':
+            return divide(a, b);
+            default:
+                throw new Error("Unkown operator");
+    }
+
+}
